@@ -6,8 +6,7 @@ import MyPostWidget from "scenes/widgets/MyPostWidget";
 import PostsWidget from "scenes/widgets/PostsWidget";
 import AdvertWidget from "scenes/widgets/AdvertWidget";
 import FriendListWidget from "scenes/widgets/FriendListWidget";
-import WeatherWidget from "scenes/widgets/WeatherWidget";
-import NewsWidget from "scenes/widgets/NewsWidget";
+
 
 
 const HomePage = () => {
@@ -26,8 +25,6 @@ const HomePage = () => {
 
                 <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
                     <UserWidget userId={_id} picturePath={picturePath} />
-                    <Box m="2rem 0" />
-                    <FriendListWidget userId={_id} />
 
                 </Box>
                 <Box
@@ -39,11 +36,9 @@ const HomePage = () => {
 
                 {isNonMobileScreens && (
                     <Box flexBasis="26%">
-                        <WeatherWidget location={location} />
-                        <Box m="2rem 0" />
                         <AdvertWidget />
                         <Box m="2rem 0" />
-                        <NewsWidget location={location} />
+                        <FriendListWidget userId={_id} />
 
                     </Box>
                 )}
