@@ -56,7 +56,7 @@ const Navbar = () => {
                         },
                     }}
                 >
-                    Sociopedia
+                    InsightPress
                 </Typography>
                 {isNonMobileScreens && (
                     <FlexBetween
